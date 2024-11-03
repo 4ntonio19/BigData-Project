@@ -1,7 +1,3 @@
-Claro! Aqui está o README atualizado com as novas instruções.
-
----
-
 # Análise do Mercado de Trabalho nos EUA com Dados do LinkedIn
 
 Este projeto visa explorar as tendências e demandas do mercado de trabalho nos Estados Unidos, com base em dados de vagas publicadas no LinkedIn entre 2023 e 2024. A análise inclui informações sobre salários, tipos de vagas (remotas e presenciais) e projeções de contratações para 2025.

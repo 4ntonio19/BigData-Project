@@ -9,7 +9,8 @@ from linkedin_dashboard.settings.settings import get_settings
 from prophet import Prophet
 
 from project.linkedin_dashboard.Enums.dataset_enum import DatasetName
-from project.linkedin_dashboard.constants.const import ALL_STATES, GLOBAL_DATASETS, SKILLS_LIST, SKILLS_WITH_DATASET_MAPPING
+
+from project.linkedin_dashboard.constants.const import ALL_STATES, GLOBAL_DATASETS, EXTERNAL_DICT, SKILLS_LIST, SKILLS_WITH_DATASET_MAPPING
 
 
 def get_global_dataset(dataset_name: str) -> pd.DataFrame:
@@ -96,6 +97,8 @@ def process_job_postings() -> pd.DataFrame:
     job_postings_df[[
         'city', 'state'
     ]] = job_postings_df['location'].apply(split_location).apply(pd.Series)
+
+    job_postings_df = replace_state_to_abbreviation(job_postings_df, EXTERNAL_DICT)
 
     job_postings_df = merge_geolocation_with_jobs(job_postings_df,
                                                   geolocation_df)
@@ -380,6 +383,7 @@ def merge_geolocation_with_jobs(
 
 
 def predict_job_postings_2025(predict_job_df: pd.DataFrame) -> pd.DataFrame:
+
     states = predict_job_df['state'].unique()
     predict_job_df['ds'] = predict_job_df['listed_time_y_m_d']
 
@@ -432,4 +436,14 @@ def predict_job_postings_2025(predict_job_df: pd.DataFrame) -> pd.DataFrame:
 
     return pd.DataFrame(results)
 
+def replace_state_to_abbreviation(job_postings_df: pd.DataFrame, external_dict: dict) -> pd.DataFrame:
+    """
+    Replaces the values in the 'state' column of the provided DataFrame with abbreviations 
+    based on an external dictionary.
+    :param job_postings_df: DataFrame containing job postings data, including a 'state' column.
+    :param external_dict: Dictionary with full state names as keys and their abbreviations as values.
+    :return: Updated DataFrame with 'state' values replaced by abbreviations.
+    """
+    job_postings_df['state'] = job_postings_df['state'].replace(external_dict)
+    return job_postings_df
 

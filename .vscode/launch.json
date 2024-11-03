@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Dash Application",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/project/linkedin_dashboard/main.py",
+        "console": "integratedTerminal",
+      },
+    ]
+  }

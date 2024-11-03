@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["EvertonMutti <evertoncastro19@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -11,7 +12,16 @@ pandas = "^2.2.2"
 dash = "^2.17.1"
 pydantic-settings = "^2.4.0"
 python-dotenv = "^1.0.1"
+scikit-learn = "^1.5.2"
+matplotlib = "^3.9.2"
+ipython = "^8.27.0"
+geopandas = "^1.0.1"
+numpy = "^2.1.2"
+prophet = "^1.1.6"
 
+
+[tool.poetry.group.dev.dependencies]
+notebook = "^7.2.2"
 
 [build-system]
 requires = ["poetry-core"]

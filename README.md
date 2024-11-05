@@ -2,32 +2,6 @@
 
 Este projeto visa explorar as tendências e demandas do mercado de trabalho nos Estados Unidos, com base em dados de vagas publicadas no LinkedIn entre 2023 e 2024. A análise inclui informações sobre salários, tipos de vagas (remotas e presenciais) e projeções de contratações para 2025.
 
-## Objetivo do Projeto
-
-O principal objetivo é entender as tendências de contratação e distribuição de oportunidades por setor e localidade, identificando padrões salariais e projeções de crescimento, além de oferecer uma visão detalhada da demanda por habilidades em setores específicos.
-
-## Estrutura do Projeto
-
-- **1. Introdução**  
-  - Apresenta o contexto do projeto e sua motivação.
-  
-- **2. Metodologia**
-  - Descrição do tratamento dos dados, incluindo padronizações salariais, substituição de valores nulos e criação de colunas de controle.
-  - Georreferenciamento dos dados para uma análise uniforme das localizações das vagas.
-
-- **3. Panorama Geral das Vagas**
-  - Análise das áreas mais aquecidas, como Tecnologia, Vendas & Marketing e Saúde.
-  - Discussão sobre o impacto das transformações digitais nos setores e os efeitos econômicos nas demandas por contratação.
-
-- **4. Regiões com Maior Oferta de Vagas**
-  - Identificação dos estados com o maior número de vagas e distribuição dos principais cargos.
-
-- **5. Projeções de Contratações para 2025**
-  - Uso do modelo Prophet para prever a demanda de vagas em 2025 nas áreas de TI, Design, Gestão de Projetos e Garantia de Qualidade (QA).
-
-- **6. Conclusão**
-  - Sumário dos principais insights e implicações para empresas e profissionais.
-
 ## Ferramentas e Bibliotecas Utilizadas
 
 - **Python**
@@ -57,15 +31,17 @@ O principal objetivo é entender as tendências de contratação e distribuiçã
    Coluna "calculated_med_salary" criada para validação e consistência dos dados após a padronização.
 
 ## Visualizações
+Previsão de Vagas em 2025 por Estado nos EUA
+ <img src='/project/assets/mapa-grafico.png'>
+ 
+Relação Senioridade X Salário
+<img src='/project/assets/senioridade-salario.png'>
 
-- **Gráficos de Barras e Linhas:**  
-  Visualizam o número de vagas por setor e estado.
+Distribuição de Vagas Remotas e Não Remotas
+<img src='/project/assets/distribuicao-de-vagas.png'>
 
-- **Mapas Interativos:**  
-  Mostram a distribuição das vagas por estado para uma visão mais intuitiva.
-
-- **Projeções Temporais:**  
-  Utilização do Prophet para prever o número de vagas em setores selecionados para o ano de 2025.
+Media Salarial: Vagas Remotas Vs Não Remotas
+<img src='/project/assets/media-salarial.png'>
 
 ## Como Executar o Projeto
 

@@ -66,64 +66,48 @@ def create_callbacks(app):
                   [Input('skill-dropdown', 'value')])
     def update_map(selected_skills):
         settings = get_settings()
-        print("Habilidades selecionadas:", selected_skills)
         geolocation_gdf = load_geolocation_data(
             settings.geo_settings.united_states_geo)
 
         if selected_skills is None or selected_skills == '':
-            print("selecionou")
             if (cached_processed_df := get_global_dataset(
                     DatasetName.PREDICT_JOB_POSTINGS_2025)) is None:
                 if (df:=get_global_dataset(DatasetName.JOB_POSTINGS)) is None:
                     df = process_job_postings()
-                print("caiu")
                 save_predict_job_postings_by_skills(df)
                 filter_predict_job_df = predict_job_postings_2025(df)
         elif selected_skills == 'DSGN':
             filter_predict_job_df = get_global_dataset(DatasetName.PREDICT_JOB_POSTINGS_DSGN)
-            print(f'linha 84: {filter_predict_job_df.head()}')
             if filter_predict_job_df is None:
                 if (df:=get_global_dataset(DatasetName.JOB_POSTINGS)) is None:
                     df = process_job_postings()
-                print(f'linha 88: {df.head()}')
                 temp_df = filter_by_skills(df, selected_skills)
-                print(f'linha 90: {temp_df.head()}')
                 filter_predict_job_df = predict_job_postings_2025(temp_df)
-                print(f'linha 92: {filter_predict_job_df.head()}')
         elif selected_skills == 'IT':
             filter_predict_job_df = get_global_dataset(DatasetName.PREDICT_JOB_POSTINGS_IT)
-            print(f'linha 84: {filter_predict_job_df.head()}')
             if filter_predict_job_df is None:
                 if (df:=get_global_dataset(DatasetName.JOB_POSTINGS)) is None:
                     df = process_job_postings()
-                print(f'linha 88: {df.head()}')
                 temp_df = filter_by_skills(df, selected_skills)
-                print(f'linha 90: {temp_df.head()}')
                 filter_predict_job_df = predict_job_postings_2025(temp_df)
-                print(f'linha 92: {filter_predict_job_df.head()}')
         elif selected_skills == 'PRDM':
             filter_predict_job_df = get_global_dataset(DatasetName.PREDICT_JOB_POSTINGS_PRDM)
-            print(f'linha 84: {filter_predict_job_df.head()}')
+
             if filter_predict_job_df is None:
                 if (df:=get_global_dataset(DatasetName.JOB_POSTINGS)) is None:
                     df = process_job_postings()
-                print(f'linha 88: {df.head()}')
                 temp_df = filter_by_skills(df, selected_skills)
-                print(f'linha 90: {temp_df.head()}')
                 filter_predict_job_df = predict_job_postings_2025(temp_df)
-                print(f'linha 92: {filter_predict_job_df.head()}')
         elif selected_skills == 'QA':
             filter_predict_job_df = get_global_dataset(DatasetName.PREDICT_JOB_POSTINGS_QA)
-            print(f'linha 84: {filter_predict_job_df.head()}')
+
             if filter_predict_job_df is None:
                 if (df:=get_global_dataset(DatasetName.JOB_POSTINGS)) is None:
                     df = process_job_postings()
-                print(f'linha 88: {df.head()}')
-                temp_df = filter_by_skills(df, selected_skills)
-                print(f'linha 90: {temp_df.head()}')
-                filter_predict_job_df = predict_job_postings_2025(temp_df)
-                print(f'linha 92: {filter_predict_job_df.head()}')
 
+                temp_df = filter_by_skills(df, selected_skills)
+
+                filter_predict_job_df = predict_job_postings_2025(temp_df)
 
         if filter_predict_job_df.empty:
             print("Nenhum dado disponível para as habilidades selecionadas.")

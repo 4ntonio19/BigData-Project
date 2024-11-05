@@ -86,11 +86,11 @@ notebook==7.2.2
 
 <table>
   <tbody>
-      <tr><td align="center" valign="top" width="14.28%"><a href="https://github.com/4ntonio19"><img src="https://avatars.githubusercontent.com/u/111891816?v=4?s=100" width="100px;" alt="Antonio Victor"/><br /><sub><b>Antonio Victor Gonçalves Carvalho </b></sub></a></td>
+      <tr><td align="center" valign="top" width="14.28%"><a href="https://github.com/4ntonio19"><img src="https://avatars.githubusercontent.com/u/111891816?v=4?s=100" width="100px;" alt="Antonio Victor"/><br /><sub><b>Antonio Victor Carvalho </b></sub></a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/EvertonMutti"><img src="https://avatars.githubusercontent.com/u/84800212?v=3?s=100" width="100px;" alt="Everton Castro"/><br /><sub><b>Everton Mutti Castro </b></sub></a><br /></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ArthurSantosOliveira"><img src="https://avatars.githubusercontent.com/u/104939137?v=4" width="100px;" alt="Arthur Oliveira"/><br /><sub><b>Arthur Santos Oliveira</b></sub></a><br /></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/NotKing22"><img src="https://avatars.githubusercontent.com/u/130709163?v=4" width="100px;" alt="Matheus de Jesus"/><br /><sub><b>Matheus de Jesus</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/RenanBatista97"><img src="https://avatars.githubusercontent.com/u/126166812?v=4?s=100" width="100px;" alt="Renan Batista"/><br /><sub><b>Renan de Carvalho Batista</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/RenanBatista97"><img src="https://avatars.githubusercontent.com/u/126166812?v=4?s=100" width="100px;" alt="Renan Batista"/><br /><sub><b>Renan de Carvalho</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
